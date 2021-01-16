@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-backend-links',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./backend-links.component.scss']
 })
 export class BackendLinksComponent implements OnInit {
+  hostname: any;
 
   constructor() { }
 
   ngOnInit() {
+    this.hostname = window.location.hostname;
   }
 
 }
